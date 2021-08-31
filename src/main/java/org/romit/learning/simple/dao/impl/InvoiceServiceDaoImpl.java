@@ -3,12 +3,16 @@ package org.romit.learning.simple.dao.impl;
 import org.romit.learning.simple.dao.InvoiceServiceDao;
 import org.romit.learning.simple.entity.Invoice;
 import org.springframework.data.redis.core.HashOperations;
+import org.springframework.stereotype.Repository;
 
+import javax.annotation.Resource;
 import java.util.Map;
 
+@Repository
 public class InvoiceServiceDaoImpl implements InvoiceServiceDao {
     private final static String hashReference = "Invoice";
 
+    @Resource(name = "getRedisTemplate")
     private HashOperations<String, Integer, Invoice> hashOperations;
 
     @Override
