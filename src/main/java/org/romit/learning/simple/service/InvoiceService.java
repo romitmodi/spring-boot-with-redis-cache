@@ -5,13 +5,13 @@ import org.romit.learning.simple.entity.Invoice;
 import java.util.List;
 
 public interface InvoiceService {
-    public Invoice saveInvoice(Invoice inv);
+    public Invoice saveInvoice(Invoice invoice);
 
-    public Invoice updateInvoice(Invoice inv, Integer invId);
+    public Invoice updateInvoice(Invoice invoice, Integer invoiceId);
 
-    public void deleteInvoice(Integer invId);
+    public void deleteInvoice(Integer invoiceId);
 
-    public Invoice getOneInvoice(Integer invId);
+    public Invoice getOneInvoice(Integer invoiceId);
 
     public List<Invoice> getAllInvoices();
 }
